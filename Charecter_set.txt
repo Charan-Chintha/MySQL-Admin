@@ -1,0 +1,17 @@
+vi /etc/my.cnf
+[mysqld]
+character_set_server=utf8mb4
+
+Query to run mysql prompt:
+set global character_set_server='utf8mb4';
+set global character_set_database='utf8mb4';
+
+
+Checking:
+select * from information_schema.schemata;
+show global variables like '%chara%';
+
+
+ALTER DATABASE mydb CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;			--> TO change default charecter set on DB
+
+ALTER TABLE mytable CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;  --> TO change default charecter set on Tables
