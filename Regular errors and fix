@@ -1,0 +1,11 @@
+Error Code: 1071 Message: (conn=6851507) Specified key was too long; max key length is 767 bytes
+
+Change the below mentioned variables in my.cnf
+
+innodb_large_prefix = 1;
+
+Important details to set above variables: 
+innodb_file_format must be BARRACUDA and At the table level you have to use ROW_FORMAT=DYNAMIC or ROW_FORMAT=COMPRESSED
+innodb_file_format=Barracuda
+innodb_file_per_table=1
+
